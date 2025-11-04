@@ -1,0 +1,443 @@
+body {
+    background: url('https://images.wallpapersden.com/image/download/dark-blue-ios-13-apple_a2pqZ26UmZqaraWkpJRnaGZrrWZlbWU.jpg');
+	font-family: Outfit;
+       background-repeat: no-repeat;
+       background-size: cover;
+       min-height: 100vh;
+       background-attachment: fixed;
+}
+	
+	#nav{
+		display: flex !important;
+		align-items: center;
+		justify-content:center;
+		flex-direction: row;
+	}
+	
+	.ems_logo{
+		width: 50px;
+	}
+	
+	.logo-section {
+	    display: flex;
+	    align-items: center;
+	    overflow: hidden;
+		margin-left: 20px;
+	}
+
+	@keyframes fadeIn {
+	    from {
+	        opacity: 0;
+	    }
+	    to {
+	        opacity: 1;
+	    }
+	}
+
+	.ems_logo {
+	    opacity: 0;
+	    animation: fadeIn 1s ease-in forwards;
+	}
+
+	@keyframes slideInFromLeft {
+	    from {
+	        transform: translateX(-100%);
+	        opacity: 0;
+	    }
+	    to {
+	        transform: translateX(0);
+	        opacity: 1;
+	    }
+	}
+
+	.navbar-brand {
+	    font-family: Inter, sans-serif;
+	    opacity: 0;
+	    animation: slideInFromLeft 0.8s ease-out 0.8s forwards;
+	    white-space: nowrap;
+	}
+
+
+    nav{
+        background: rgba(0, 0, 0, 0.59);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+    }
+	
+	.navbar-brand{
+		font-weight: 500;
+		margin-left:20px;
+	}
+	
+	.dashboard-card {
+	    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+	    border: none;
+	    min-height: 120px; /* Ensures cards have a consistent height */
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	}
+	
+	.dashboard-card:hover {
+	    transform: translateY(-8px);
+	    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+	    cursor: pointer;
+	}
+	
+	.dashboard-card:active {
+	    transform: translateY(-2px);
+	    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	}
+	
+	.card-link {
+	    text-decoration: none;
+	}
+
+	#add-card{
+		background: rgba(0, 130, 255, 0.16);
+		border-radius: 16px;
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(7.4px);
+		-webkit-backdrop-filter: blur(7.4px);
+		border: 3px solid rgba(0, 130, 255, 1);
+            padding-top:10px;
+            padding-bottom:10px;
+            border-radius: 20px;
+        }
+
+        #add-card h5{
+            background: linear-gradient(to bottom right,rgb(0, 91, 156),rgb(0, 39, 157));
+            background-clip: text;
+            color: transparent;
+            -webkit-background-clip: text;
+            margin-top: 20px;
+        }
+
+        #update-card{
+			background: rgba(255, 207, 0, 0.16);
+			border-radius: 16px;
+			box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+			backdrop-filter: blur(7.4px);
+			-webkit-backdrop-filter: blur(7.4px);
+			border: 3px solid rgba(160, 162, 3, 1);
+            padding-top:10px;
+            padding-bottom:10px;
+            border-radius: 20px;
+        }
+
+        #update-card h5{
+            background: linear-gradient(to bottom right,rgb(165, 157, 3),rgb(140, 142, 8));
+            background-clip: text;
+            color: transparent;
+            -webkit-background-clip: text;
+            margin-top: 20px;
+        }
+
+        #delete-card{
+			background: rgba(255, 0, 0, 0.16);
+			border-radius: 16px;
+			box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+			backdrop-filter: blur(7.4px);
+			-webkit-backdrop-filter: blur(7.4px);
+			border: 3px solid rgba(255, 0, 0, 1);
+            padding-top:20px;
+            padding-bottom:10px;
+            border-radius: 10px;
+        }
+
+        #delete-card h5{
+            background: linear-gradient(to bottom right,rgb(229, 77, 77),rgb(144, 6, 6));
+            background-clip: text;
+            color: transparent;
+            -webkit-background-clip: text;
+            margin-top: 20px;
+        }
+
+        #deleteAll-card{
+			background: rgba(0, 206, 140, 0.16);
+			border-radius: 16px;
+			box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+			backdrop-filter: blur(7.4px);
+			-webkit-backdrop-filter: blur(7.4px);
+			border: 3px solid rgba(0, 206, 140, 1);
+            padding-top:20px;
+            padding-bottom:10px;
+            border-radius: 10px;
+        }
+
+        #deleteAll-card h5{
+            background: linear-gradient(to bottom right,rgb(40, 191, 146),rgb(7, 127, 79));
+            background-clip: text;
+            color: transparent;
+            -webkit-background-clip: text;
+            margin-top: 20px;
+        }
+
+        .card-link{
+            text-decoration: none;
+        }
+
+        .icon{
+            width: 90px;
+            height: 90px;
+        }
+
+        .icon2{
+            width: 95px;
+            height: 90px;
+        }
+		
+		#add-card, #update-card, #delete-card, #deleteAll-card {
+		    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+		}
+
+		.icon, .icon2 {
+		    transition: transform 0.4s ease;
+		}
+
+		.card-body {
+		    perspective: 1000px;
+		}
+
+		#add-card, #update-card, #delete-card, #deleteAll-card {
+		    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+		}
+
+		.icon, .icon2 {
+		    transition: transform 0.7s ease-in-out;
+		}
+
+		#add-card:hover, 
+		#update-card:hover, 
+		#delete-card:hover, 
+		#deleteAll-card:hover {
+		    transform: translateY(-8px);
+		}
+
+		#add-card:hover {
+		    box-shadow: 0 10px 25px rgba(0, 91, 156, 0.3); /* Blue shadow */
+		}
+
+		#update-card:hover {
+		    box-shadow: 0 10px 25px rgba(162, 162, 3, 0.3); /* Yellow shadow */
+		}
+
+		#delete-card:hover {
+		    box-shadow: 0 10px 25px rgba(162, 3, 3, 0.3); /* Red shadow */
+		}
+
+		#deleteAll-card:hover {
+		    box-shadow: 0 10px 25px rgba(3, 162, 112, 0.3); /* Green shadow */
+		}
+
+		#add-card:hover .icon,
+		#update-card:hover .icon,
+		#delete-card:hover .icon,
+		#deleteAll-card:hover .icon2 {
+		    transform: rotateY(360deg);
+		}
+		
+		#view-card{
+            background: rgba(255, 255, 255, 0.37);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(6.6px);
+            -webkit-backdrop-filter: blur(6.6px);
+            border: 1px solid rgba(255, 255, 255, 1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .view-section{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 20px;
+            font-weight: 800;
+        }
+
+        .view-section img{
+            width: 50px;
+            transition: transform 0.7s ease-in-out;
+        }
+
+        .card-text{
+            font-size: 12px;
+        }
+
+		#view-card:hover .view-section img {
+		    transform: rotateY(360deg);
+		}
+
+       #view-card:hover {
+		    transform: scale(1.1,1.1)
+       }
+	   
+	   .logout-form {
+           position: relative; 
+       }
+
+       #logout {
+           position: relative;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           width: 90px;
+           height: 35px;
+           overflow: hidden;
+           padding: 0;
+           border: 1px solid rgba(255, 0, 0, 1);
+           background: rgba(255, 0, 0, 0.37);
+           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+           backdrop-filter: blur(6.6px);
+           -webkit-backdrop-filter: blur(6.6px);
+           color: white;
+           transition: all 0.3s ease-in-out;
+       }
+
+       #logout .logout-text,
+       #logout .logout-icon {
+           display: inline-block;
+           transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+       }
+
+       #logout .logout-icon {
+           position: absolute;
+           transform: translateX(50px);
+           opacity: 0;
+       }
+
+       #logout:hover .logout-text {
+           transform: translateX(-50px);
+           opacity: 0;
+       }
+
+       #logout:hover .logout-icon {
+           transform: translateX(0);
+           opacity: 1;
+       }
+
+       #logout:active .logout-icon {
+           animation: slide-out-right 0.4s ease-out forwards;
+       }
+
+       @keyframes slide-out-right {
+           from {
+               transform: translateX(0);
+               opacity: 1;
+           }
+           to {
+               transform: translateX(60px);
+               opacity: 0;
+           }
+       }
+	   
+	   .modal-content{
+           background: rgba(255, 255, 255, 0.37);
+           border-radius: 16px;
+           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+           backdrop-filter: blur(8.6px);
+           -webkit-backdrop-filter: blur(8.6px);
+           border: 1px solid rgba(255, 255, 255, 1);
+       }
+
+       .modal-content input{
+           padding-top: 4px;
+           padding-bottom: 4px;
+           border-radius: 20px;
+       }
+
+       .modal-header,.modal-footer{
+           border: none;
+       }
+
+       #deleteSingleModal,#deleteAllModal{
+           margin-top: 10%;
+       }
+
+       #delete-btn{
+           width: 80px;
+           background: linear-gradient(to bottom right,rgb(0, 91, 156),rgb(0, 39, 157));
+           border: none;
+       }
+
+       #deleteAll-btn{
+           width: 170px;
+           background: linear-gradient(to bottom right,rgb(0, 91, 156),rgb(0, 39, 157));
+           border: none;
+       }
+
+       #cancel-btn{
+           background: linear-gradient(to bottom right,rgb(65, 65, 65),rgb(0, 6, 24));
+           border: none;
+		   transition: all 0.5s;
+       }
+	   
+	   #cancel-btn:hover{
+          background: linear-gradient(to bottom right,rgb(0, 6, 24),rgb(65, 65, 65));
+      }
+
+       #delete-btn:hover,#deleteAll-btn:hover{
+           background: linear-gradient(to bottom right,rgb(156, 0, 0),rgb(70, 0, 0));
+       }
+
+       .delete-btn-animated {
+           position: relative;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           width: 150px; /* Increased width for the longer text */
+           height: 38px;
+           overflow: hidden;
+           padding: 0;
+           transition: background-color 0.3s ease;
+       }
+
+       .delete-btn-animated span {
+           position: absolute;
+           transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+       }
+
+       .delete-btn-animated .delete-text {
+           transform: translateX(0);
+           opacity: 1;
+       }
+
+       .delete-btn-animated .delete-icon {
+           transform: translateX(40px);
+           opacity: 0;
+       }
+
+       .delete-btn-animated .delete-sweep-icon {
+           transform: translateX(-40px);
+           opacity: 0;
+       }
+
+       .delete-btn-animated:hover .delete-text {
+           transform: translateX(-40px);
+           opacity: 0;
+       }
+
+       .delete-btn-animated:hover .delete-icon {
+           transform: translateX(0);
+           opacity: 1;
+       }
+
+       .delete-btn-animated:active .delete-icon {
+           opacity: 0;
+       }
+
+       .delete-btn-animated:active .delete-sweep-icon {
+           animation: slide-in-sweep 0.4s ease-out forwards;
+       }
+
+       @keyframes slide-in-sweep {
+           from {
+               transform: translateX(-40px);
+               opacity: 0;
+           }
+           to {
+               transform: translateX(0);
+               opacity: 1;
+           }
+       }
